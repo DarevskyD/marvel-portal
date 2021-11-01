@@ -2,18 +2,25 @@
 
 .app {
     &__header {
+        background-color: $background-color;                
+    }
+    &__header-wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 20px;
     }
     &__title {
         font-weight: bold;
         font-size: 28px;
         line-height: 37px;
+        color: $light-color;
         span {
             color: $main-color;
         }
     }
     &__menu {
+        color: $light-color;
         ul {
             display: flex;
             justify-content: space-between;

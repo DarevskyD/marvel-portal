@@ -1,0 +1,23 @@
+.app{
+  &__footer-navigation-links {
+    li {
+      padding-right: 15px;
+    }
+    .link {
+      width: 25px;
+      height: 25px;
+      color: white;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }      
+    }
+  }
+  &__footer-navigation-title {
+    margin-bottom: 15px;
+  }
+  &__footer-navigation {
+    display: flex;
+    flex-direction: column;
+  }
+}

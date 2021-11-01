@@ -48,25 +48,19 @@ input::-webkit-inner-spin-button {
 }
 
 .app {
-    width: 1100px;
-    margin: 0 auto;
-    padding: 50px 0 50px 0;
-    position: relative;
-    .bg-decoration {
-        position: absolute;
-        right: -174px;
-        bottom: -70px;
-        z-index: -1;
-    }
-}
-
-main {
-    margin-top: 50px;
-    position: relative;
+    //width: 1100px;
+    //margin: 0 auto;
+    //padding: 50px 0 50px 0;
+    position: relative;    
 }
 
 .pulse {
     animation: pulse 1.5s ease-in-out .5s infinite
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin: auto;  
 }
 
 @keyframes pulse {

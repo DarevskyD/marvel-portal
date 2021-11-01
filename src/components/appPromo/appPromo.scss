@@ -1,0 +1,19 @@
+@import '../../style/variables.scss';
+
+.app {
+  &__promo {
+    background: url("../../resources/img/promo-bg.jpg") no-repeat;
+    background-size: cover;    
+    background-position: center;
+    height: auto;
+  }
+
+  &__promo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;   
+    padding: 130px 0 130px;
+    color: $light-color;
+  }
+}

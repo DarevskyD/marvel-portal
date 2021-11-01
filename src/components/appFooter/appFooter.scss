@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+
+.app {
+  &__footer {    
+    background-color: #151515;
+    padding: 20px 0 20px;
+  }
+  &__footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 37px;
+    color: $light-color;
+  }
+  &__footer-navigation-title {
+    color: $light-color;
+  }
+  &__footer-navigation-links {
+    display: flex;
+  }
+}

@@ -1,12 +1,13 @@
 @import '../../style/variables.scss';
 
 .char {
+    &__list {
+      max-width: 650px;
+    }
     &__content {
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: 650px 425px;
-        column-gap: 25px;
-        align-items: start;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 40px;
     }
     &__grid {
         display: grid;
@@ -17,7 +18,7 @@
     &__item {
         width: 200px;
         height: 318px;
-        background-color: $dark;
+        background-color: $dark-color;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
         padding: 15px;
         cursor: pointer;
