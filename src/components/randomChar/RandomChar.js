@@ -5,10 +5,6 @@ import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import "./randomChar.scss";
 class RandomChar extends Component {
-  constructor(props) {
-    super(props);
-    this.updateChar();
-  }
 
   state = {
     char: {},
@@ -17,6 +13,14 @@ class RandomChar extends Component {
   };
 
   marvelServices = new MarvelServices();
+
+  componentDidMount() {
+    this.updateChar();
+  }
+
+  componentWillUnmount() {
+    console.log('unmount')
+  }
 
   onCharLoaded = (char) => {
     this.setState({ char, loading: false });
@@ -34,7 +38,7 @@ class RandomChar extends Component {
       .catch(this.onError);
   };
 
-  render() {
+  render() {   
     const { char, loading, error } = this.state;
     const errorMessage = error ? <ErrorMessage /> : null;
     const spinner = loading ? <Spinner /> : null;
@@ -59,7 +63,7 @@ class RandomChar extends Component {
                 <p className="randomchar__title">Or choose another one</p>
               </div>
               <div>
-                <button className="button button__main">
+                <button onClick={this.updateChar} className="button button__main">
                   <div className="inner">try it</div>
                 </button>
               </div>
@@ -73,9 +77,15 @@ class RandomChar extends Component {
 
 const View = ({ char }) => {
   const { name, description, thumbnail, homepage, wiki } = char;
+  const imageNotAvailable = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg';
+  let imgStyle = { 'objectFit': 'cover'};
+  if(thumbnail === imageNotAvailable) {
+    imgStyle = {'objectFit': 'fill'};
+  }
+
   return (
     <>
-      <img src={thumbnail} alt="Random character" className="randomchar__img" />
+      <img src={thumbnail} alt="Random character" className="randomchar__img" style={imgStyle}/>
       <div className="randomchar__info">
         <p className="randomchar__name">{name}</p>
         <p className="randomchar__descr">{description}</p>
