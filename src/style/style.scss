@@ -48,10 +48,15 @@ input::-webkit-inner-spin-button {
 }
 
 .app {
-    //width: 1100px;
-    //margin: 0 auto;
-    //padding: 50px 0 50px 0;
-    position: relative;    
+    position: relative;
+    .bg-decoration {
+        position: absolute;
+        width: 458px;
+        height: auto;
+        right: 90px;
+        bottom: 255px;
+        z-index: -1;
+    }    
 }
 
 .pulse {

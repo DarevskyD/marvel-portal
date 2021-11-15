@@ -2,10 +2,11 @@
 
 .char {
     &__list {
-      max-width: 650px;
-      margin: 0 auto;
+      flex: 1 1 650px;
+      //min-width: 650px;
+      //margin: 0 auto;
     }
-    &__content {
+    &__content {        
         display: flex;
         justify-content: space-between;
         padding: 0 0 40px;
@@ -14,7 +15,7 @@
         display: flex;
         flex-basis: 100%;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
     }
     &__item {
         width: 200px;
