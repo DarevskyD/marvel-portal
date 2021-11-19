@@ -73,10 +73,10 @@ class CharInfo extends Component {
 
 const View = ({ char }) => {
   const { name, description, thumbnail, homepage, wiki, comics } = char;
-  const imageNotAvailable =
-    "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+  const imageNotAvailable1 = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+  const imageNotAvailable2 = "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c002e0305708.gif";
   let imgStyle = { objectFit: "cover" };
-  if (thumbnail === imageNotAvailable) {
+  if (thumbnail === imageNotAvailable1 || thumbnail === imageNotAvailable2) {
     imgStyle = { objectFit: "fill" };
   }
   return (
