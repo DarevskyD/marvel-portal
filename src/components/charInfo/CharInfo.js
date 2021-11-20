@@ -3,6 +3,7 @@ import Skeleton from "../skeleton/Skeleton";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import MarvelServices from "../../services/MarvelService";
+import PropTypes from 'prop-types';
 
 import "./charInfo.scss";
 class CharInfo extends Component {
@@ -112,5 +113,9 @@ const View = ({ char }) => {
     </>
   );
 };
+
+CharInfo.propTypes = {
+  charId: PropTypes.number
+}
 
 export default CharInfo;
