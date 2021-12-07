@@ -26,8 +26,8 @@ export const useHttp = () => {
         return data;
       } catch (e) {
         setLoading(false);
-        setError(e.massage);
-        setError(true);
+        setError(e.message);
+        //setError(true);
         throw e;       
       }
     },
