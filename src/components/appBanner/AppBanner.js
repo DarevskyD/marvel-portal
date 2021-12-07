@@ -1,18 +1,17 @@
-import './appBanner.scss';
-import avengers from '../../resources/img/Avengers.png';
-import avengersLogo from '../../resources/img/Avengers_logo.png';
+import "./appBanner.scss";
+import insider from "../../resources/img/marvel-insider.png";
 
 const AppBanner = () => {
-    return (
-        <div className="app__banner">
-            <img src={avengers} alt="Avengers"/>
-            <div className="app__banner-text">
-                New comics every week!<br/>
-                Stay tuned!
-            </div>
-            <img src={avengersLogo} alt="Avengers logo"/>
-        </div>
-    )
-}
+  return (
+    <div className="app__banner">
+      <div className="wrapper app__banner-wrapper">
+        <img className="app__banner-img" src={insider} alt="marvel-insider" />
+        <p className="app__banner-text">
+          MARVEL COMICS
+        </p>        
+      </div>
+    </div>
+  );
+};
 
 export default AppBanner;

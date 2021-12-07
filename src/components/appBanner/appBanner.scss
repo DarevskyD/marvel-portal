@@ -2,19 +2,26 @@
 
 .app {
     &__banner {
-        width: 100%;
-        background-color: $dark;
-        height: 100px;
-        padding: 0 25px 0 45px;
-        display: grid;
-        grid-template-columns: 152px auto 133px;
-        &-text {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-            color: #FFFFFF;
-            padding-left: 83px;
-            padding-top: 18px;
-        }
+      background: url("../../resources/img/banner-bg.jpg") no-repeat;
+      background-size: cover;    
+      background-position: top;
+      height: auto;
     }
-}
+  
+    &__banner-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      flex-direction: column;   
+      padding: 60px 0 60px;
+      color: $light-color;
+    }
+    &__banner-img {
+        width: 400px;
+        margin-bottom: 30px;
+    }
+    &__banner-text {
+        font-size: 38px;
+        font-weight: bold;
+    }
+  }
