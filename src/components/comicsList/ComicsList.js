@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import useMarvelServices from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
-import PropTypes from "prop-types";
 
 import "./comicsList.scss";
 
@@ -36,29 +36,28 @@ const ComicsList = () => {
   };
 
   const allComics = comicsList.map((comics, i) => {
-    // const { thumbnail } = comics;
+    const { thumbnail } = comics;
 
-    // const imageNotAvailable1 =
-    //   "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
-    // const imageNotAvailable2 =
-    //   "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c002e0305708.gif";
+    const imageNotAvailable =
+      "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
 
-    // let imgStyle = { objectFit: "cover" };
-    // if (thumbnail === imageNotAvailable1 || thumbnail === imageNotAvailable2) {
-    //   imgStyle = { objectFit: "fill" };
-    // }
+    let imgStyle = { objectFit: "cover" };
+    if (thumbnail === imageNotAvailable) {
+      imgStyle = { objectFit: "fill" };
+    }
 
     return (
       <li className="comics__item" key={i}>
-        <a href="#">
+        <Link to={`/comics/${comics.id}`}>
           <img
             src={comics.thumbnail}
             alt={comics.title}
+            style={imgStyle}
             className="comics__item-img"
           />
           <div className="comics__item-name">{comics.title}</div>
           <div className="comics__item-price">{comics.price}</div>
-        </a>
+        </Link>
       </li>
     );
   });
@@ -74,12 +73,12 @@ const ComicsList = () => {
           {spinner}
           {allComics}
         </ul>
-        <button 
+        <button
           className="button button__main button__long"
           disabled={newComicsLoading}
           style={{ display: comicsEnded ? "none" : "block" }}
           onClick={() => onRequest(offset)}
-          >
+        >
           <div className="inner">load more</div>
         </button>
       </div>
