@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import useMarvelServices from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
@@ -19,7 +20,7 @@ const CharList = (props) => {
   }, []);
 
   const onRequest = (offset, initial) => {
-    initial ? setNewCharLoading(false) : setNewCharLoading(true);    
+    initial ? setNewCharLoading(false) : setNewCharLoading(true);
     getAllCharacters(offset).then(onCharAllLoaded);
   };
 
@@ -49,16 +50,17 @@ const CharList = (props) => {
     }
 
     return (
-      <li
-        className="char__item"
-        key={char.id}
-        onClick={() => props.onCharSelected(char.id)}
-      >
-        <img src={char.thumbnail} alt={char.name} style={imgStyle} />
-        <div className="char__name">{char.name}</div>
-      </li>
+      <CSSTransition key={char.id} timeout={500} classNames="char__item">
+        <li
+          className="char__item"
+          onClick={() => props.onCharSelected(char.id)}
+        >
+          <img src={char.thumbnail} alt={char.name} style={imgStyle} />
+          <div className="char__name">{char.name}</div>
+        </li>
+      </CSSTransition>
     );
-  });  
+  });
 
   const errorMessage = error ? <ErrorMessage /> : null;
   const spinner = loading && !newCharLoading ? <Spinner /> : null;
@@ -68,7 +70,7 @@ const CharList = (props) => {
       <ul className="char__flex">
         {errorMessage}
         {spinner}
-        {allCharList}
+        <TransitionGroup component={null}>{allCharList}</TransitionGroup>
       </ul>
       <button
         className="button button__main button__long"
