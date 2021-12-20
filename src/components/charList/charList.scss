@@ -56,5 +56,9 @@
         text-transform: uppercase;
         color: #fff;
     }
+
+    &__container {
+        flex: 0 1 425px;
+    }
 }
 
