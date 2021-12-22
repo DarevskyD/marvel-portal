@@ -15,7 +15,8 @@ import "./charSearchForm.scss";
 const CharSearchForm = () => {
   const [char, setChar] = useState(null);
 
-  const { loading, error, getCharacterByName, clearError } = useMarvelServices();
+  const { loading, error, getCharacterByName, clearError } =
+    useMarvelServices();
 
   const updateChar = (name) => {
     clearError();
@@ -32,7 +33,7 @@ const CharSearchForm = () => {
       <ErrorMessage />
     </div>
   ) : null;
-  
+
   const results = !char ? null : char.length > 0 ? (
     <div className="char__search-wrapper">
       <div className="char__search-success">
@@ -62,25 +63,31 @@ const CharSearchForm = () => {
         })}
         onSubmit={({ charSearch }) => updateChar(charSearch)}
       >
-        <Form>
-          <label className="char__search-label" htmlFor="charSearch">
-            Or find a character by name:
-          </label>
-          <div className="char__search-wrapper">
-            <Field
-              id="charSearch"
-              name="charSearch"
-              type="text"
-              placeholder="Enter name"
-            />
-            <button type="submit" className="button button__main" disabled={loading}>
-              <div className="inner">find</div>
-            </button>
-          </div>
-          <FormikErrorMessage name="charSearch" component="div" />
-        </Form>
-        {results}
-        {errorMessage}
+        <>
+          <Form>
+            <label className="char__search-label" htmlFor="charSearch">
+              Or find a character by name:
+            </label>
+            <div className="char__search-wrapper">
+              <Field
+                id="charSearch"
+                name="charSearch"
+                type="text"
+                placeholder="Enter name"
+              />
+              <button
+                type="submit"
+                className="button button__main"
+                disabled={loading}
+              >
+                <div className="inner">find</div>
+              </button>
+            </div>
+            <FormikErrorMessage name="charSearch" className="char__search-error" component="div" />
+          </Form>
+          {results}
+          {errorMessage}
+        </>
       </Formik>
     </div>
   );
