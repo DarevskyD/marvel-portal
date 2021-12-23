@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 import AppPromo from "../appPromo/AppPromo";
 import RandomChar from "../randomChar/RandomChar";
@@ -18,6 +19,10 @@ const MainPage = () => {
 
   return (
     <>
+      <Helmet>
+        <meta name="description" content="Marvel information portal" />
+        <title>Marvel information portal</title>
+      </Helmet>
       <AppPromo />
       <ErrorBoundary>
         <RandomChar />
@@ -27,12 +32,12 @@ const MainPage = () => {
           <CharList onCharSelected={onCharSelected} />
         </ErrorBoundary>
         <div className="char__container">
-        <ErrorBoundary>
-          <CharInfo charId={selectedChar} />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <CharSearchForm />
-        </ErrorBoundary>
+          <ErrorBoundary>
+            <CharInfo charId={selectedChar} />
+          </ErrorBoundary>
+          <ErrorBoundary>
+            <CharSearchForm />
+          </ErrorBoundary>
         </div>
       </div>
       <img className="bg-decoration" src={decoration} alt="marvel-comics" />

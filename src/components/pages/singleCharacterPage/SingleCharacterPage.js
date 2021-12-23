@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import AppPromo from "../../appPromo/AppPromo";
 import useMarvelServices from "../../../services/MarvelService";
@@ -45,6 +46,10 @@ const View = ({ char }) => {
   const { name, description, thumbnail } = char;
   return (
     <div className="single-character">
+      <Helmet>
+        <meta name="description" content={`This page is about ${name}`} />
+        <title>{name}</title>
+      </Helmet>
       <div className="single-character__wrapper wrapper">
         <img src={thumbnail} alt={name} className="single-character__img" />
         <div className="single-character__info">
