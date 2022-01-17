@@ -1,13 +1,22 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .char {
+    &__container {
+      @include media-tablet {
+        margin-top: 30px;         
+      }
+    }
     &__info {       
         min-height: 318px;        
         height: fit-content;
         padding: 25px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
         background-color: $light-color;
-        margin-bottom: 30px;        
+        margin-bottom: 30px;
+        @include media-tablet {          
+          max-width: 650px;
+          margin: 0 auto 30px;           
+        }     
         &-name {
             font-weight: bold;
             font-size: 22px;
@@ -32,6 +41,13 @@
         margin-top: 35px;
         a:nth-child(2) {
             margin-top: 10px;
+        }
+        @include media-tablet {
+          display: flex;
+          flex-direction: column;
+          a {
+            width: 150px;
+          }
         }
     }
     &__descr {

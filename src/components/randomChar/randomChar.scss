@@ -1,8 +1,11 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .randomchar {
     &__wrapper {
         padding: 30px 0 60px;
+        @include media-tablet {
+          padding: 30px 58.5px 40px;
+      }
     }
 
     &__container {        
@@ -10,13 +13,19 @@
         justify-content: space-between;        
         flex-wrap: nowrap;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        @include media-tablet {
+            flex-direction: column;          
+        }
     }
     
     &__block {
         display: flex;
         justify-content: center;        
         padding: 40px 35px;
-        flex: 1;        
+        flex: 1;
+        @include media-tablet {
+          padding: 40px 30px;
+        }                
     }
     &__img {
         width: 180px;
@@ -54,6 +63,9 @@
         justify-content: space-between;                       
         padding: 40px 35px;
         background-color: $dark-color;
+        @include media-tablet {
+          padding: 40px 30px;
+        } 
     }
     &__title {
         font-weight: bold;

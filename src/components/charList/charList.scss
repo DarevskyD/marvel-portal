@@ -1,19 +1,29 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .char {
     &__list {
-      flex: 0 1 650px;
+      flex: 0 1 650px; 
+      @include media-tablet {
+        flex: none;
+      }
     }
     &__content {        
         display: flex;
         justify-content: space-between;
         padding: 0 0 40px;
+        @include media-tablet {
+          flex-direction: column;
+        } 
     }
     &__flex {
         display: flex;
         flex-basis: 100%;
         justify-content: space-between;
-        flex-wrap: wrap;        
+        flex-wrap: wrap; 
+        @include media-tablet {
+          max-width: 650px;
+          margin: auto;
+        }       
     }
     &__item {
         width: 200px;

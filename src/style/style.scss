@@ -1,6 +1,8 @@
-@import './variables';
+@import './variables.scss';
+@import './button.scss';
+@import './wrapper.scss';
+@import './mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-@import './button';
 
 * {
     font-family: "Roboto Condensed", sans-serif;
@@ -55,16 +57,14 @@ input::-webkit-inner-spin-button {
         right: 180px;
         bottom: 255px;
         z-index: -1;
+        @include media-tablet {
+            display: none;
+        } 
     }    
 }
 
 .pulse {
     animation: pulse 1.5s ease-in-out .5s infinite
-}
-
-.wrapper {
-    max-width: $content-width;
-    margin: auto;  
 }
 
 @keyframes pulse {
