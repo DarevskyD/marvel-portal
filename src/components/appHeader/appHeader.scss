@@ -9,18 +9,36 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0 20px;
-
-        @include media-tablet {
-            padding: 30px;
-          }
+				@include media-laptop {
+					padding: 30px;
+				}
+				@include media-mobile {
+					padding: 30px 20px;
+					flex-direction: column;
+				}
     }
     &__title {
         font-weight: bold;
         font-size: 28px;
         line-height: 37px;
         color: $light-color;
+				@include media-mobile {
+					margin-bottom: 20px;
+				}
+				a {
+					@include media-mobilesmall {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+				}
         span {
             color: $main-color;
+						@include media-mobilesmall {	
+							margin: auto;
+							line-height: 46px;						
+							font-size: 40px;
+						}
         }
     }
     &__menu {

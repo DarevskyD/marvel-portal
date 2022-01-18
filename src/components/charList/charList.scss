@@ -6,11 +6,18 @@
       @include media-tablet {
         flex: none;
       }
+			@include media-mobile {
+        display: flex;				
+				flex-direction: column;
+      }
     }
     &__content {        
         display: flex;
         justify-content: space-between;
         padding: 0 0 40px;
+				@include media-laptop {
+          padding: 0 20px 40px;
+        }
         @include media-tablet {
           flex-direction: column;
         } 
@@ -20,10 +27,17 @@
         flex-basis: 100%;
         justify-content: space-between;
         flex-wrap: wrap; 
+				@include media-laptop {
+					padding-right: 15px;
+        }
         @include media-tablet {
           max-width: 650px;
           margin: auto;
-        }       
+        }
+				@include media-mobile {
+					padding-right: 0px;
+					justify-content: center;
+				}       
     }
     &__item {
         width: 200px;
@@ -65,10 +79,6 @@
         line-height: 29px;
         text-transform: uppercase;
         color: #fff;
-    }
-
-    &__container {
-        flex: 0 1 425px;
     }
 }
 

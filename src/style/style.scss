@@ -57,6 +57,11 @@ input::-webkit-inner-spin-button {
         right: 180px;
         bottom: 255px;
         z-index: -1;
+        @include media-laptop {
+          height: 520px;
+          right: 75px;
+          bottom: 257px;
+        }
         @include media-tablet {
             display: none;
         } 

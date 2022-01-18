@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .app {
   &__promo {
@@ -9,11 +9,26 @@
   }
 
   &__promo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;   
+    display: flex;    
+    justify-content: center;        
     padding: 130px 0 130px;
+    
+    @include media-mobile {
+      padding: 80px 20px;
+    }
+  }
+
+  &__promo-block {        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: $light-color;
+  }
+
+  &__promo-title {
+    margin: auto;
+    @include media-mobile {
+      margin-bottom: 15px;
+    }
   }
 }

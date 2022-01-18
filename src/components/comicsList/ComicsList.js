@@ -25,13 +25,13 @@ const ComicsList = () => {
 
   const onComicsAllLoaded = (newComicsList) => {
     let ended = false;
-    if (newComicsList.length < 8) {
+    if (newComicsList.length < 12) {
       ended = true;
     }
 
     setComicsList((ComicsList) => [...comicsList, ...newComicsList]);
     setNewComicsLoading((newCharLoading) => false);
-    setOffset((offset) => offset + 8);
+    setOffset((offset) => offset + 12);
     setComicsEnded((charEnded) => ended);
   };
 

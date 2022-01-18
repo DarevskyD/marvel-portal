@@ -1,8 +1,11 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .comics {
     &__wrapper {
       padding: 60px 0px 40px;
+      @include media-tablet {
+        padding: 30px 20px;
+      }
     }
     &__list {
       display: flex;

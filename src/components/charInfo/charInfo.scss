@@ -2,9 +2,10 @@
 
 .char {
     &__container {
-      @include media-tablet {
-        margin-top: 30px;         
-      }
+        flex: 0 1 425px;
+        @include media-tablet {
+            margin-top: 30px;         
+        }
     }
     &__info {       
         min-height: 318px;        
@@ -16,7 +17,7 @@
         @include media-tablet {          
           max-width: 650px;
           margin: 0 auto 30px;           
-        }     
+        }    
         &-name {
             font-weight: bold;
             font-size: 22px;

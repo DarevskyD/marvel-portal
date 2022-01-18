@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import '../../style/style.scss';
 
 .app {
     &__banner {
@@ -19,9 +19,15 @@
     &__banner-img {
         width: 400px;
         margin-bottom: 30px;
+        @include media-tablet {
+          width: 300px;
+        }
     }
     &__banner-text {
         font-size: 38px;
         font-weight: bold;
+        @include media-tablet {
+          font-size: 30px;
+        }
     }
   }
