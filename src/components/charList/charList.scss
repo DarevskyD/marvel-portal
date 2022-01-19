@@ -48,11 +48,26 @@
         margin-bottom: 30px;
         cursor: pointer;
         transition: 0.3s transform;
+				@include media-mobile {
+					width: 250px;
+				}
+				@include media-mobilesmall {
+					width: 200px;	
+					height: 295px;				
+				}
         img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             transform: translate(-15px, -15px);
+						@include media-mobile {
+							width: 250px;
+							height: 250px;
+						}
+						@include media-mobilesmall {
+							width: 200px;
+							height: 200px;
+						}
         }
         &:hover {
             box-shadow: 0 5px 16px $main-color;

@@ -1,5 +1,4 @@
-@import '../../style/variables.scss';
-@import '../../style/mixins.scss';
+@import '../../style/style.scss';
 
 .app {
   &__footer {    
@@ -14,12 +13,23 @@
     @include media-laptop {
       padding: 0 20px;
     }
+    @include media-mobilesmall {
+      flex-direction: column;
+    }
   }
-  &__title {
+  &__footer-title {
     font-weight: bold;
     font-size: 34px;
     line-height: 37px;
+    margin-bottom: 15px;
     color: $light-color;
+    span {
+      color: $main-color;
+      @include media-mobilesmall {               
+        line-height: 46px;						
+        font-size: 40px;
+      }
+  }
   }
   &__footer-navigation-title {
     color: $light-color;

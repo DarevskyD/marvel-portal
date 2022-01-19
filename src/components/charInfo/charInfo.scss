@@ -31,11 +31,20 @@
     &__basics {
         display: grid;
         grid-template-columns: 150px auto;
-        column-gap: 25px;
+        column-gap: 25px; 
+        @include media-mobilesmall {
+          display: flex;
+          flex-direction: column;
+        }       
         img {
             width: 150px;
             height: 150px;
             object-fit: cover;
+            @include media-mobilesmall {
+              width: 200px;
+              height: 200px;
+              margin-bottom: 10px;
+            }
         }
     }
     &__btns {

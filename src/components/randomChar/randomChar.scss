@@ -73,6 +73,9 @@
     &__btns {
         a:nth-child(1) {
             margin-right: 30px;
+            @include media-mobilesmall {
+              margin-bottom: 10px;
+            }
         }
     }
     &__static {

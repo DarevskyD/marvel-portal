@@ -22,12 +22,18 @@
         @include media-tablet {
           width: 300px;
         }
+        @include media-mobilesmall {
+          width: 225px;
+        }
     }
     &__banner-text {
         font-size: 38px;
         font-weight: bold;
         @include media-tablet {
           font-size: 30px;
+        }
+        @include media-mobilesmall {
+          font-size: 25px;
         }
     }
   }

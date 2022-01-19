@@ -1,17 +1,28 @@
-@import '../../../style/variables.scss';
+@import '../../../style/style.scss';
 
 .single-comic {
     &__wrapper {      
-      display: grid;
-      padding: 40px 0;
-      grid-template-columns: 293px 550px auto;
-      column-gap: 50px;
-      align-items: start;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 40px 0;
+        @include media-laptop {
+            padding: 40px 30px;
+          }
+          @include media-tablet {
+            flex-wrap: wrap;          
+          }
+          @include media-mobile {
+            padding: 40px 20px;          
+          }
     }
     &__img {
         box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
         width: 293px;
-        height: 450px;
+        height: auto;
+        @include media-mobilesmall {
+          width: 250px;          
+        }
     }
     &__name {
         font-weight: bold;
@@ -30,12 +41,21 @@
         line-height: 34px;
         color: $main-color;
         margin-top: 40px;
+        @include media-mobile {
+          margin-top: 20px;          
+        }
     }
     &__back {
-        justify-self: end;
+        display: flex;
+        justify-content: end;
+        flex-basis: 40%;        
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
+        @include media-tablet {
+          justify-content: start;
+          color: $main-color;
+        }
         &:hover {
             color: $main-color;
         }

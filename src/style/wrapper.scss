@@ -1,21 +1,4 @@
-// .wrapper {
-//   max-width: $content-width;
-//   margin: auto;  
-// }
-
-// .header, .promo, .tools, .strategies, .about-us, .contact-us, .footer {
-//   .wrapper {
-//       @include media-mobile {
-//           padding: 0 21px;
-//       }
-//   }
-// }
-
 .wrapper {
   max-width: $content-width;
   margin: auto;
-
-  // @include media-laptop {
-  //     padding: 0 46px;
-  // }
 }
