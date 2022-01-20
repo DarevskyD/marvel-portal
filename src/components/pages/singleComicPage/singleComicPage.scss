@@ -9,13 +9,11 @@
         @include media-laptop {
             padding: 40px 30px;
           }
-          @include media-tablet {
-            flex-wrap: wrap;          
-          }
           @include media-mobile {
+            flex-direction: column;
             padding: 40px 20px;          
           }
-    }
+    }    
     &__img {
         box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
         width: 293px;
@@ -23,6 +21,11 @@
         @include media-mobilesmall {
           width: 250px;          
         }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;      
+      flex-grow: 2;
     }
     &__name {
         font-weight: bold;
@@ -48,7 +51,7 @@
     &__back {
         display: flex;
         justify-content: end;
-        flex-basis: 40%;        
+        flex-basis: 11%;                
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;

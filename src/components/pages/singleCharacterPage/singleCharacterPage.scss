@@ -9,10 +9,8 @@
         @include media-laptop {
           padding: 40px 30px;
         }
-        @include media-tablet {
-          flex-wrap: wrap;          
-        }
         @include media-mobile {
+          flex-direction: column;
           padding: 40px 20px;          
         }
       }
@@ -24,6 +22,11 @@
         @include media-mobilesmall {
           width: 250px;          
         }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;      
+      flex-grow: 2;
     }
     &__name {
         font-weight: bold;
@@ -37,11 +40,14 @@
         margin-top: 15px;
     }
     &__back {
-        flex-basis: 40%;      
+        display: flex;
+        justify-content: end;
+        flex-basis: 11%;             
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
         @include media-tablet {
+          justify-content: start;
           color: $main-color;
         }
         &:hover {
