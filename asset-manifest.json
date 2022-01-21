@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/marvel-portal/static/css/main.d4c2d70c.chunk.css",
+    "main.js": "/marvel-portal/static/js/main.6c883a1d.chunk.js",
+    "main.js.map": "/marvel-portal/static/js/main.6c883a1d.chunk.js.map",
+    "runtime-main.js": "/marvel-portal/static/js/runtime-main.beffd779.js",
+    "runtime-main.js.map": "/marvel-portal/static/js/runtime-main.beffd779.js.map",
+    "static/js/2.3c5551ac.chunk.js": "/marvel-portal/static/js/2.3c5551ac.chunk.js",
+    "static/js/2.3c5551ac.chunk.js.map": "/marvel-portal/static/js/2.3c5551ac.chunk.js.map",
+    "index.html": "/marvel-portal/index.html",
+    "static/css/main.d4c2d70c.chunk.css.map": "/marvel-portal/static/css/main.d4c2d70c.chunk.css.map",
+    "static/js/2.3c5551ac.chunk.js.LICENSE.txt": "/marvel-portal/static/js/2.3c5551ac.chunk.js.LICENSE.txt",
+    "static/media/Marvel-Comics.085cd9ab.png": "/marvel-portal/static/media/Marvel-Comics.085cd9ab.png",
+    "static/media/appBanner.scss": "/marvel-portal/static/media/banner-bg.4633ee8f.jpg",
+    "static/media/error.2a41a7da.gif": "/marvel-portal/static/media/error.2a41a7da.gif",
+    "static/media/appPromo.scss": "/marvel-portal/static/media/promo-bg.d843b80f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.beffd779.js",
+    "static/js/2.3c5551ac.chunk.js",
+    "static/css/main.d4c2d70c.chunk.css",
+    "static/js/main.6c883a1d.chunk.js"
+  ]
+}
