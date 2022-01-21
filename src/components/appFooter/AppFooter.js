@@ -7,7 +7,7 @@ const AppFooter = () => {
     <footer className="app__footer">
       <div className="wrapper app__footer-wrapper">
         <h1 className="app__footer-title">
-          <Link to="/">
+          <Link to="/marvel-portal/">
             <span>Marvel</span>
           </Link>
         </h1>

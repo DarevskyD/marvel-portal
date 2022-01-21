@@ -15,10 +15,10 @@ const App = () => {
         <AppHeader />
         <main>
           <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/comics" element={<ComicsPage />} />
-            <Route path="/comics/:comicId" element={<SingleComicPage />} />
-            <Route path="/characters/:characterId" element={<SingleCharacterPage />} />
+            <Route path="/marvel-portal/" element={<MainPage />} />
+            <Route path="/marvel-portal/comics" element={<ComicsPage />} />
+            <Route path="/marvel-portal/comics/:comicId" element={<SingleComicPage />} />
+            <Route path="/marvel-portal/characters/:characterId" element={<SingleCharacterPage />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </main>

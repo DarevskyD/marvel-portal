@@ -48,7 +48,7 @@ const ComicsList = () => {
 
     return (
       <li className="comics__item" key={i}>
-        <Link to={`/comics/${comics.id}`}>
+        <Link to={`/marvel-portal/comics/${comics.id}`}>
           <img
             src={comics.thumbnail}
             alt={comics.title}
